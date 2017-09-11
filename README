@@ -1,0 +1,33 @@
+Programmer : Ciaran Roft 
+Date : 30/01/2017
+Description : 	A python application that can analyse WAV files. It can extract the data nessesary to extract the amplitudes values for each sample,
+	      	That can then be plotted as a waveform, Using these amplitude values Panoramix can then extract the data nessesary to plot a spectrogram
+	      	of all the the frequencies contained within the WAV file.
+
+		There are methods within the Panoramix application that allow the user to send either amplitude values or frequncy values to 
+		be represented of an LED matrix controlled by an Arduino. The code uploaded to the Arduino is an Arduino library writen specifically 
+		for the Panoramix application
+	
+
+Arduino Libraries Used: 
+
+light_WS2812B : Used to control the LEDS
+Mrtix : Specifically written to control the Panoramix LED matrix
+
+Installed Python Libraries :
+
+pylab - For plotting waveform and spectrogram
+numpy - For datastructures and calculations
+alsaaudio - Used to play WAV file
+
+Instructions for use:
+
+First all of the extrnal libraries for python have to be installed, and the folder called matrix that has the
+matrix header file and cpp file inside has to be placed in the Arduino library folder. This creates the Arduino library 
+used to control the LED matrix.
+
+Then simply open the python idle IDE and open up Panoramix.p, rename the beat string to the name of the WAV file to be analyzed. 
+Once the waveform and Spectrogram are displayed the Panoramix application waits untill this window is closed before continuing to 
+generate commands, send thoes commands to the Arduino, and play the WAV file. And let Panoramix handle the rest
+
+	
